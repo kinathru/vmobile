@@ -1,0 +1,273 @@
+/* Put your custom CSS here */
+
+
+
+
+.my_pages
+{
+	height: 0;
+}
+
+.content-back
+{
+    height: 100%;
+    padding: 0;
+    text-shadow: none;
+}
+
+.header-nav
+{
+	margin-bottom: 1px;
+}
+
+#login_panel
+{
+	margin: 60% 10%;
+	border: solid #389FDE;
+	padding: 5px 5px;
+}
+
+#store_name
+{
+
+	width: 100%;
+	padding: 3px 6px 2px 0px;
+}
+
+#vmart_logo
+{
+	height: 30px;
+	padding: 0px 0px 0px 0px;
+
+}
+
+#logout_img{
+	width: 10%;
+	float: right;
+	margin-right: 2%;
+}
+.ui-header .ui-title.head_vmartlk 
+{
+	margin: 0.6em 10% .8em;
+	text-align: left;
+}
+
+.home-grid
+{
+	height: 86%;
+	padding: 12% 3% 3% 3%;
+} 
+
+.home-grid .ui-grid-a
+{
+	line-height: 0;
+    border-right:5px solid #04aeda;
+    border-bottom:5px solid #04aeda;
+    font-size: 28px;
+}
+
+.home-grid .ui-grid-a .ui-block-a
+{
+   text-align: center;
+   height: 30%;
+   background-color: #383838; 
+   padding: 16% 1%;
+   box-sizing: border-box;
+   display:inline-block;           
+   border-left:5px solid #04aeda;
+   border-top:5px solid #04aeda;
+}
+
+.home-grid .ui-grid-a .ui-block-b
+{
+	text-align: center;
+   	height: 30%;
+   	background-color: #383838;
+   	padding: 16% 1%;
+   	box-sizing: border-box;
+    display:inline-block;           
+    border-left:5px solid #04aeda;
+    border-top:5px solid #04aeda;
+}
+
+.home-grid .ui-grid-a .ui-block-a .home-links
+{
+
+	text-shadow: 0 0px 0 #fff;
+	text-decoration: none;
+}
+
+.home-grid .ui-grid-a .ui-block-b .home-links
+{
+	text-shadow: 0 0px 0 #fff;
+	text-decoration: none;
+}
+
+.content-back
+{
+	text-align: center;
+	height: 100%;
+	background-color: #303030;
+	color: white;
+}
+
+.ui-btn.back-btn
+{
+	margin: 0 5px;
+	float: right;
+}
+
+/* Style for the Inbox list */
+
+.inbox-list li a img
+{
+	padding: 14px 20px;
+	max-height: 50px;
+	max-width: 50px;
+}
+
+.ui-listview.inbox-list
+{
+	border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.ui-listview.inbox-list .ui-li
+{
+	border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+/* End Style for the Inbox list */
+
+/*Today Sales Table*/
+
+.today-sales-tbl
+{
+	padding: 1px 1px 1px 1px;
+}
+
+.today-sales-tbl tbody tr td.subtotal-td
+{
+	text-align: right;
+	padding-right: 10px;
+}
+
+.today-sales-tbl tbody tr td
+{
+	text-align: center;
+	padding: 1px 1px 1px 1px;
+}
+
+.today-sales-tbl thead th
+{
+	text-align: center;
+}
+
+/*Add Item*/
+.capture_img
+{
+	max-width: 212px;
+	max-height: 145px;
+}
+
+.camera_btns 
+{
+	margin: 0.05em 0;
+}
+
+.camera_btns img
+{
+	width: 32px;
+	height: 32px;
+}
+
+.camera_btns .ui-btn-inner 
+{
+	padding: 0 0;
+	border-top: 0;	
+}
+
+.cam_btn_group
+{
+	display: block !important;
+	-webkit-margin-before: 0em !important;
+	-webkit-margin-after: 0em !important;
+	-webkit-margin-start: 0px !important;
+	-webkit-margin-end: 0px !important;
+}
+
+.camera_grid .ui-grid-a
+{
+	width: 100%;
+	padding:10px 10px;
+}
+
+.camera_grid .ui-grid-a .ui-block-a
+{
+	width: 80%;
+	float: left;
+}
+
+.camera_grid .ui-grid-a .ui-block-b
+{
+	width: 20%;
+	float: right;
+	min-height: 145px;
+	padding-top: 18.5px;
+	padding-bottom: 18.5px;
+}
+
+.camera_grid .ui-grid-a .ui-block-b .camera_btns
+{
+
+}
+
+
+/*Stock Items*/ 
+.stocks-list .ui-li-thumb 
+{
+	margin: 10px 5px;
+}
+
+
+/*My Sales Charts*/
+
+.charts
+{
+	height:100%;
+	width:100%;
+
+}
+
+/*Edit My Profile*/
+.edit_prof_content
+{
+	padding: 10px 10px;
+}
+
+/*Add Item*/
+.add_item_content
+{
+	padding: 10px 10px;
+}
+
+/*Icons*/
+.ui-icon-capture 
+{ 
+    background:  url(icons/Camera-icon.png) 100% 100% no-repeat;
+    background-size: 32px 32px; 
+}
+
+.ui-icon-additem
+{
+  background:  url(icons/add_image.png) 100% 100% no-repeat;
+  background-size: 32px 32px; 
+}
+
+.ui-icon-removeitem
+{
+  background:  url(icons/remove_image.png) 100% 100% no-repeat;
+  background-size: 32px 32px; 
+}
+
