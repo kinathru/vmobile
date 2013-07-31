@@ -1,34 +1,15 @@
-
-
-$(function(){
-
- $(document).on('swipeleft', '[data-role="page"]', function(event){    
-    if(event.handled !== true) // This will prevent event triggering more then once
-    {    
-        var nextpage = $(this).next('[data-role="page"]');
-        // swipe using id of next page if exists
-        if (nextpage.length > 0) {
-            if(nextpage.attr("id")!="add_item_pg")
-            {
-              $.mobile.changePage(nextpage, {transition: "slide", reverse: false}, true, true);
-            }
-        }
-        event.handled = true;
-    }
-    return false;         
+$('#reposHome').bind('pageinit', function(event) {
+	loadRepos();
 });
 
-$(document).on('swiperight', '[data-role="page"]', function(event){   
-    if(event.handled !== true) // This will prevent event triggering more then once
-    {      
-        var prevpage = $(this).prev('[data-role="page"]');
-        if (prevpage.length > 0) {
-            $.mobile.changePage(prevpage, {transition: "slide", reverse: true}, true, true);
-        }
-        event.handled = true;
-    }
-    return false;            
-});
-
-});//End Document Ready
-
+function loadRepos() {
+    $.ajax("https://api.github.com/legacy/repos/search/javascript").done(function(data) {
+        var i, repo;
+        $.each(data.repositories, function (i, repo) {
+            $("#allRepos").append("<li><a href='https://github.com/" + repo.username + "/" + repo.name + "'>"
+            + "<h4>" + repo.name + "</h4>"
+            + "<p>" + repo.username + "</p></a></li>");
+        });
+        $('#allRepos').listview('refresh');
+    });
+}

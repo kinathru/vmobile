@@ -1,22 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>VmartLK</title>
-  
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.3.2.min.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>VmartLK</title>
+
+        <link rel="stylesheet" href="css/codiqa.ext.css"/>
+
+        <link rel="stylesheet" href="jquerymobile/jquery.mobile-1.3.2.min.css">
+
+
+        <!-- jQuery and jQuery Mobile -->
+        <script src="jquery/jquery-1.10.1.min.js"></script>
+        <script src="jquerymobile/jquery.mobile-1.3.2.min.js"></script>
+
+        <!--JqPlot Files-->
+        <script type="text/javascript" src="jqplot/jquery.jqplot.min.js"></script>
+        <script type="text/javascript" src="jqplot/plugins/jqplot.categoryAxisRenderer.min.js"></script>
+        <script type="text/javascript" src="jqplot/plugins/jqplot.pieRenderer.min.js"></script>
+        <script type="text/javascript" src="jqplot/plugins/jqplot.highlighter.min.js"></script>
+        <script type="text/javascript" src="jqplot/plugins/jqplot.canvasTextRenderer.min.js"></script>
+        <script type="text/javascript" src="jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="jqplot/jquery.jqplot.min.css" />
+
+
+        
+        <title>Hello World</title>
+    </head>
+    <body>
+
+        <!--Login Page-->
+
+<div data-role="page" id="login_pg" class="my_pages">
     
-  <!-- jQuery and jQuery Mobile -->
-  <script src="jquery/jquery-1.10.1.min.js"></script>
-  <script src="jquerymobile/jquery.mobile-1.3.2.min.js"></script>
-  
-     
-</head>
-<body>
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer" >
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+        </h3>
+        
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+
+      <div data-role="controlgroup" class="login_panel">
+          <input type="text" id="lgn_user" name="lgn_user" placeholder="Username" data-mini="true" />
+          <input type="password" id="lgn_pass" name="lgn_pass" placeholder="Password" data-mini="true" />
+          <input id="login_btn" type="button" value="Sign In" />
+          <label id="login_error" style="color:red;display:none;font-size:12px;" >Please Enter Valid Details</label>
+          <a href="#page1">Main</a>
+          
+      </div>
+
+    </div>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>
+            
+        </h3>
+    </div>
+</div>
+
+
+
+<!--End Login Page-->
+
 
 <!-- Home -->
 <div data-role="page" id="page1" class="my_pages">
@@ -25,7 +79,9 @@
     <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer" >
         <h3 class="head_vmartlk" class="main_page">
            <img id="vmart_logo" src="logo.gif" alt="image" >
-           <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
         </h3>
         
         <div data-role="navbar" class="header-nav">
@@ -64,19 +120,19 @@
               <a class="home-links" data-transition="slide" href="#add_item_pg">Add Item</a> 
             </div>
             <div class="ui-block-b">
-              <a class="home-links" data-transition="slide" href="#edit_profile_pg">Edit My Profile</a>
+              <a class="home-links" data-transition="slide" href="#edit_profile_pg">Profile</a>
             </div>
             <div class="ui-block-a">
-              <a class="home-links" data-transition="slide" href="#my_sales_pg">My Sales</a>
+              <a class="home-links" data-transition="slide" href="#my_sales_pg">Sales</a>
             </div>
             <div class="ui-block-b">
-              <a class="home-links" data-transition="slide" href="#current_stks_pg">Current Stocks</a>
+              <a class="home-links" data-transition="slide" href="#current_stks_pg">Stocks</a>
             </div>
             <div class="ui-block-a">
-              <a class="home-links" data-transition="slide" href="#my_items_pg">My Items</a>
+              <a class="home-links" data-transition="slide" href="#my_items_pg">Items</a>
             </div>
             <div class="ui-block-b">
-              <a class="home-links" data-transition="slide" href="#vmart_pg">Visit Vmart</a>
+              <a class="home-links" data-transition="slide" href="#vmart_pg">Vmart</a>
             </div>
         </div>
        
@@ -91,8 +147,610 @@
 </div>
 <!--End Home-->
 
+<!--Page 2-->
+<div data-role="page" id="page2" class="my_pages">
+    
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+        <div data-role="navbar" class="header-nav">
+            <ul>
+                <li>
+                    <a href="#page1" data-transition="slide"  data-theme="" >
+                      <img src="icons/home.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="#page2" data-transition="slide" data-theme="" >
+                        <img src="icons/profiles.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#page3" data-transition="slide" data-theme="" >
+                        <img src="icons/mail.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
 
-<script type="text/javascript" src="phonegap.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-</body>
+                <li>
+                    <a href="#page4" data-transition="slide" data-theme="" >
+                        <img src="icons/money.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div data-role="content" class="content-back">
+      <h2>My Profile</h2>
+      <h3>Total Sales</h3>
+      <h4>2500</h4>
+      <h3>Toal Revenue</h3>
+      <h4>51000/-</h4>
+      <h3>Ranking</h3>
+      <p><img src="images/star.png" style="width:16px;"><img src="images/star.png" style="width:16px;"><img src="images/star.png" style="width:16px;">
+        <img src="images/star.png" style="width:16px;"><img src="images/star.png" style="width:16px;"></p>
+      <h3>Subscribers</h3>
+      <h4>115</h4>
+    </div>
+</div>
+<!--End Page 2-->
+
+<!--Page 3-->
+<div data-role="page" id="page3" class="my_pages">
+    
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+        <div data-role="navbar" class="header-nav">
+            <ul>
+                <li>
+                    <a href="#page1" data-transition="slide"  data-theme="" >
+                      <img src="icons/home.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="#page2" data-transition="slide" data-theme="" >
+                        <img src="icons/profiles.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#page3" data-transition="slide" data-theme="" >
+                        <img src="icons/mail.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#page4" data-transition="slide" data-theme="" >
+                        <img src="icons/money.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div data-role="content" class="content-back">
+      <ul class="inbox-list" data-role="listview" data-theme="a" data-inset="true" >
+      <li data-role="list-divider" data-icon="arrow-d">Friday, October 8, 2010</li>
+      <li>
+        <a href="">
+          <img src="images/p1.png" />
+          <h1> Necklace 15</h1>
+          <p>2 items ordered</p>
+          <span class='ui-li-count'>2</span>
+          <p class="ui-li-aside ui-li-desc">6.24pm</p>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="images/p2.png"/>
+          <h3>Showl 25</h3>
+          <p>3 items ordered</p>
+          <span class='ui-li-count'>3</span>
+          <p class="ui-li-aside ui-li-desc">5.55pm</p>
+
+        </a>
+      </li>
+      <li data-role="list-divider" data-icon="arrow-d">Monday, October 1, 2010</li>
+      <li>
+        <a href="">
+          <img src="images/p3.png" />
+          <h1> Necklace 18</h1>
+          <p>5 items ordered</p>
+          <span class='ui-li-count'>5</span>
+          <p class="ui-li-aside ui-li-desc">7.34pm</p>
+
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="images/p4.png" />
+          <h3>Bangle 25</h3>
+          <p>2 items ordered</p>
+          <span class='ui-li-count'>2</span>
+          <p class="ui-li-aside ui-li-desc">8.22am</p>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+    </div>
+</div>
+<!--End Page 3-->
+
+<!--Page 4-->
+<div data-role="page" id="page4" class="my_pages">
+    
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+        <div data-role="navbar" class="header-nav">
+            <ul>
+                <li>
+                    <a href="#page1" data-transition="slide"  data-theme="" >
+                      <img src="icons/home.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                <li>
+                    <a href="#page2" data-transition="slide" data-theme="" >
+                        <img src="icons/profiles.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#page3" data-transition="slide" data-theme="" >
+                        <img src="icons/mail.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#page4" data-transition="slide" data-theme="" >
+                        <img src="icons/money.png" style="max-height: 32px;max-width: 32px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div data-role="content" class="content-back">
+      <h3>Items Sold : 5</h3>
+      <h3>Total Revenue : 2500/-</h3>
+      <table class="today-sales-tbl" data-role="table" id="my-table" data-mode="">
+      <thead>
+        <tr>
+          <th>Item ID</th>
+          <th>Item Title</th>
+          <th>Quantity</th>
+          <th>Sub Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><a href="foo.com" data-rel="external">Gold Necklace</a></td>
+          <td>1</td>
+          <td class="subtotal-td">15000</td>
+        </tr>
+
+        <tr>
+          <td>12</td>
+          <td><a href="foo.com" data-rel="external">Silver Bangle</a></td>
+          <td>2</td>
+          <td class="subtotal-td">8000</td>
+        </tr>
+
+        <tr>
+          <td>25</td>
+          <td><a href="foo.com" data-rel="external">Natural Scarf</a></td>
+          <td>3</td>
+          <td class="subtotal-td">7500</td>
+        </tr>
+
+        <tr>
+          <td>35</td>
+          <td><a href="foo.com" data-rel="external">Green Medal</a></td>
+          <td>3</td>
+          <td class="subtotal-td">1200</td>
+        </tr>
+
+      </tbody>
+    </table>
+    </div>
+</div>
+<!--End Page 4-->
+
+<!--=====================================================ADD ITEM==================================================================-->
+
+<!--Add Item Page-->
+<div data-role="page" id="add_item_pg" class="my_pages">
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+          
+            <a href="#page1" data-transition="slide">
+              <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+            </a>
+           </a>
+        </h3>
+        
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+
+      <div class="add_item_content">
+
+        <div class="camera_grid">
+          
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+              <img src="images/def-image.png" class="capture_img">
+            </div>
+            
+            <div class="ui-block-b">
+              <a data-role="button" data-shadow="false" data-inline="false" data-theme="none" href="" class="camera_btns">
+                <img src="icons/camera.png" border="0">
+              </a>
+              <a data-role="button" data-shadow="false" data-inline="false" data-theme="none" href="" class="camera_btns">
+                <img src="icons/plus.png" border="0">
+              </a>
+              <a data-role="button" data-shadow="false" data-inline="false" data-theme="none" href="" class="camera_btns">
+                <img src="icons/remove.png" border="0">
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div data-role=controlgroup>
+          <input type="text" id="title" name="title" placeholder="Title" data-mini="true" />
+
+          <textarea id="description" name="description" placeholder="Description" rows="8" data-mini="true"></textarea>
+
+          <div id="price_curr">
+            <table style="width:100%;">
+              <tr>
+                <td>
+                  <input type="number" id="price" name="price" placeholder="Price" data-mini="true"/>  
+                </td>
+                
+                <td>
+                  <select id="" name="currency" placeholder="currency" data-mini="true">
+                    <option>LKR</option>
+                    <option>USD</option>
+                    <option>AUD</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" id="qty" name="qty" placeholder="Qty" data-mini="true" />
+                </td>
+              </tr>
+            </table>
+          </div>  
+
+          <select id="" name="vmart_cat" placeholder="Category" data-mini="true">
+                    <option>Jewellary</option>
+                    <option>Handicrafts</option>
+                    <option>Gifts</option>
+                    <option>Cards</option>
+          </select>
+
+          <div data-role="controlgroup">
+
+            <label for="status_1" data-mini="true" >ACTIVE</label>
+            <input type="radio" id="status_1" name="status" data-mini="true" />
+
+            <label for="status_2" data-mini="true" >SUSPEND</label>
+            <input type="radio" id="status_2" name="status" data-mini="true" />
+
+            <label for="status_3" data-mini="true" >REMOVED</label>
+            <input type="radio" id="status_3" name="status" data-mini="true" />
+          
+          </div>
+          <button type="submit" id="add_item_submit" data-icon="plus" data-iconpos="right" data-mini="true" >Add Item</button>
+        </div>
+      </div>
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--End Add item Page-->
+
+<!--===============================================END ADD ITEM=======================================================================-->
+
+
+<!--===============================================EDIT PROFILE=======================================================================-->
+
+<!--Edit profile Page-->
+<div data-role="page" id="edit_profile_pg" class="my_pages">
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+           <a href="#page1" data-transition="slide">
+            <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+      <div class="edit_prof_content">
+        
+        <img src="images/def-image.png" style="max-height:145px;" >
+        
+        <table style="width:100%;">
+          <tr>
+            <td>
+              <button data-icon="gear" data-iconpos="right" data-mini="true" >Change</button>
+            </td>
+            <td>
+              <button data-icon="delete" data-iconpos="right" data-mini="true" >Cancel</button>
+            </td>
+          </tr>
+        </table>
+
+        <div data-role="controlgroup" data-mini="true">
+
+          <input type="text" id="full_name" name="full_name" placeholder="Full Name" />
+          <input type="email" name="email" id="email" value="" placeholder="Emails">
+          <textarea id="address" name="address" placeholder="Address" ></textarea>
+          <input type="tel" name="tel" id="tel" value="" placeholder="Tel Number">
+
+          <button type="submit" id="profile_submit" data-icon="check" data-iconpos="right">Save Changes</button>
+
+        </div>
+      
+      </div>
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--End Edit profile Page-->
+
+<!--===============================================EDIT PROFILE=======================================================================-->
+
+<!--===============================================MY SALES=======================================================================-->
+
+<!--My Sales Page-->
+<div data-role="page" id="my_sales_pg" class="my_pages">
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+           <a href="#page1" data-transition="slide">
+            <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+      <h3>My Sales</h3>
+
+      <div class="my_sales_div" >
+
+      <table width="100%" data-mini="true">
+        <tr>
+          <td>
+            <select id="" name="year_select" placeholder="Year" data-mini="true">
+              <option>2010</option>
+              <option>2011</option>
+              <option>2012</option>
+              <option>2013</option>
+            </select>
+          </td>
+
+          <td>
+            <select id="" name="month_select" placeholder="Month" data-mini="true">
+              <option>JAN</option>
+              <option>FEB</option>
+              <option>MAR</option>
+              <option>APR</option>
+              <option>MAY</option>
+              <option>JUN</option>
+              <option>JUL</option>
+            </select>
+          </td>
+
+          <td>
+            <select id="" name="product_select" placeholder="product" data-mini="true">
+              <option>Necklace 15</option>
+              <option>Necklace 25</option>
+              <option>Bangle 21</option>
+              <option>Showl 15</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <div class="charts" id="sales_chart" ></div>
+
+      <div class="charts" id="products_chart"></div>
+
+      </div><!--End my sales div-->
+
+    </div><!--End content div-->
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--End My Sales Page-->
+
+<!--===============================================END MY SALES=======================================================================-->
+
+
+<!--===============================================CURRENT STOCKS=======================================================================-->
+
+<!--Current Stocks Page-->
+<div data-role="page" id="current_stks_pg" class="my_pages">
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+           <a href="#page1" data-transition="slide">
+            <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+      
+      <h3>Stocks</h3>
+
+      <ul id="my_stocks_li" class="stocks-list" data-role="listview" data-theme="a" data-inset="true" data-filter="true" data-mini="true">
+        
+      </ul>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--Current Stocks Page-->
+
+<!--===============================================END CURRENT STOCKS=======================================================================-->
+
+
+<!--===============================================MY ITEMS=======================================================================-->
+
+<!--My Items-->
+<div data-role="page" id="my_items_pg" class="my_pages">
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+           <a href="#page1" data-transition="slide">
+            <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+      <h3>My Items</h3>
+
+      <ul id="my_items_li" class="items-list" data-role="listview" data-theme="a" data-inset="true" data-filter="true">
+        
+      </ul>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--End My Items-->
+
+<!--===============================================END MY ITEMS=======================================================================-->
+
+
+<!--Visit VMart-->
+<div data-role="page" id="vmart_pg" class="my_pages">
+
+
+
+    <!--Header and Navbar-->
+    <div id="header" data-theme="a" data-role="header" class="main_page" data-position="fixed" data-id="footer">
+        <h3 class="head_vmartlk" class="main_page">
+           <img id="vmart_logo" src="logo.gif" alt="image" >
+           <a href="#login_pg">
+            <img id="logout_img" src="icons/shut_down.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+           <a href="#page1" data-transition="slide">
+            <img id="home_btn" src="icons/home.png" alt="image" style="max-height: 32px;max-width: 32px;" >
+           </a>
+        </h3>
+        
+    </div>
+    <!--End Header and navbar-->
+
+    <div data-role="content" class="content-back">
+
+      <a href="">
+        <img src="images/vmart_logo.gif" alt="vmart-logo" style="width:200px;margin-top:30%;">
+      </a>
+
+    </div>
+
+    <div data-theme="a" data-role="footer" data-position="fixed">
+    </div>
+
+</div>
+<!--End Visit Vmart-->
+
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <!-- Extra Codiqa features -->
+        <script src="js/codiqa.ext.js"></script>
+
+        <script type="text/javascript">
+             $(function(){
+
+
+          //When home links hovered
+          $(".home-links").mouseover(function(){
+            $(this).parent().css('background-color', '#1A44B1');
+          });
+
+          $(".home-links").mouseout(function(){
+            $(this).parent().css('background-color', '#303030');
+          });   
+
+
+        });
+
+        </script>        
+    </body>
 </html>
